@@ -13,6 +13,10 @@
 </div>
 
 
-<button (click)="showPassword = !showPassword">Display Details</button>
+<button (click)="onDisplayDetailsClick()">Display Details</button>
 <br>
 <p *ngIf="showPassword">Secret password = tuna</p>
+<br>
+<ul>
+  <li *ngFor="let date of datesWhenClicked">{{ date }}</li>
+</ul>
