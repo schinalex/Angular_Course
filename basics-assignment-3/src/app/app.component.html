@@ -13,6 +13,6 @@
 </div>
 
 
-<button>Display Details</button>
+<button (click)="showPassword = !showPassword">Display Details</button>
 <br>
-<p>Secret password = tuna</p>
+<p *ngIf="showPassword">Secret password = tuna</p>
