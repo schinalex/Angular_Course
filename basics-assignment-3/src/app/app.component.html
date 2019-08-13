@@ -18,5 +18,9 @@
 <p *ngIf="showPassword">Secret password = tuna</p>
 <br>
 <ul>
-  <li *ngFor="let date of datesWhenClicked">{{ date }}</li>
+  <li
+    *ngFor="let date of datesWhenClicked; let index = index"
+    [ngStyle]="{ 'background-color': index > 4 ? 'blue' : '' }"
+    [ngClass]="{ white: index > 4 }"
+    >{{ date }}</li>
 </ul>
