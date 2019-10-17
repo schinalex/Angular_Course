@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() routeChnaged = new EventEmitter<string>()
+  @Output() routeChanged = new EventEmitter<string>()
 
   constructor() { }
 
