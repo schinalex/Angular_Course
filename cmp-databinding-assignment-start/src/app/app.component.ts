@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  log = console.log
+  numbers: Array<number> = []
+  onNumberAdded = n => this.numbers.push(n)
 }

@@ -13,6 +13,12 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
     </div>
-    <app-game (numberChanged)="log($event)"></app-game>
+    <app-game (numberChanged)="onNumberAdded($event)"></app-game>
+    <div class="column">
+      <p *ngFor="let n of numbers">
+        <app-even *ngIf="n % 2 === 0" [n]="n"></app-even>
+        <app-odd *ngIf="n % 2" [n]="n"></app-odd>
+      </p>
+    </div>
   </div>
 </div>
