@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent implements OnInit {
-
+  number: number = 0
+  tick = () => {
+    this.number++
+    console.log(this.number)
+  }
+  game = setInterval(this.tick, 2000)
   constructor() { }
 
   ngOnInit() {
