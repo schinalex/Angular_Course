@@ -12,6 +12,7 @@ export class GameComponent implements OnInit {
     console.log(this.number)
   }
   game = setInterval(this.tick, 2000)
+  pause = () => clearInterval(this.game)
   constructor() { }
 
   ngOnInit() {
